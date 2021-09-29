@@ -1,6 +1,5 @@
 from rocking_notes import db
 import peewee
-from flask_peewee.auth import Auth
 from rocking_notes import auth
 
 
@@ -26,9 +25,6 @@ class Note(db.Model):
 
     def __str__(self):
         return f"({self.get_id()}) User: {self.user.username} public: {self.public}"
-
-    # def __repr__(self) -> str:
-    #     return f"{self.message} public: {self.public}"
 
 
 # Now For Many to Many relations
