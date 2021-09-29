@@ -1,13 +1,25 @@
-from flask_peewee.rest import RestResource
+from flask_peewee.rest import RestResource, RestrictOwnerResource
 
 
-class UserResource(RestResource):
+class UserResource(RestrictOwnerResource):
     """Define User api response"""
 
     fields = ['username', ]
 
 
-class NoteResource(RestResource):
-    """Define Tag API response"""
+class TagResource(RestrictOwnerResource):
+    """Define Not tag respose"""
+    fields = ['tag_name', ]
 
-    include_resources = {'user': UserResource}
+
+class NoteResource(RestrictOwnerResource):
+    """Define Tag API response (All Public)"""
+
+    fields = ['user', 'message', 'public', ]
+
+    include_resources = {
+        'user': UserResource,
+    }
+
+    def get_query(self):
+        return self.model.select().where(self.model.public)

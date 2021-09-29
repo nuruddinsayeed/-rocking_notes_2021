@@ -11,15 +11,28 @@ class Tag(db.Model):
 
     tag_name = peewee.CharField(max_length=50)
 
+    def __str__(self):
+        return f"{self.tag_name}"
+
 
 class Note(db.Model):
     """Define Users """
 
     user = peewee.ForeignKeyField(auth.get_user_model(), on_delete='CASCADE')
-    tag = peewee.ManyToManyField(Tag, backref='notes')
+    tags = peewee.ManyToManyField(Tag, backref='notes')
 
     message = peewee.CharField(max_length=255)
     public = peewee.BooleanField(default=False)
+
+    def __str__(self):
+        return f"({self.get_id()}) User: {self.user.username} public: {self.public}"
+
+    # def __repr__(self) -> str:
+    #     return f"{self.message} public: {self.public}"
+
+
+# Now For Many to Many relations
+NotesTags = Note.tags.get_through_model()
 
 # Flask db init
 # flask db migrate -m ""
