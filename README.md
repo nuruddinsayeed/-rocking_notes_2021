@@ -28,9 +28,7 @@ $ pip install - requirements.txt
 
 Installing Part is done now lets Run our app
 
-```json
 $ python app.py
-```
 
 ## Project Detail:
 
@@ -50,7 +48,9 @@ or registration. So to authenticate, this token have to be used in
 header section as Authorization and the tokne should be like this:
 (Bearer your_auth_token). sample token: Bearer
 
+```json
 Bearer eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMjk3MDI1MywianRpIjoiOGUwMWI5NTEtYmYzMC00ZDFlLTk4YmItOWI5NjgzNTI1NDM0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJ1c2VybmFtZSI6InNheWVkIn0sIm5iZiI6MTYzMjk3MDI1MywiZXhwIjoxNjMyOTcxMTUzfQ.mr0nc-fvJqm7HRyBmQSFjuceWTCQb2lfNPBFvVdG9P8
+```
 
 ## This Project has three types of api endpoint
 
@@ -58,7 +58,7 @@ Bearer eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMjk3MDI1MywianRpIjoiOGUwMWI5NTEtYmYzMC00Z
 
 _Save this login token to use it latter_
 
-````json
+```json
 Login Token URL: http://127.0.0.1:5000/api/login
 Registration URL: http://127.0.0.1:5000/api/register
 
@@ -66,22 +66,22 @@ Registration URL: http://127.0.0.1:5000/api/register
 
 ### Sample Registration payload
 
-
+```json
 {
-"username": "sayeed",
-"email": "secret@email.com",
-"password": "123"
+  "username": "sayeed",
+  "email": "secret@email.com",
+  "password": "123"
 }
-
+```
 
 ### Sample Login payload
 
-
+```json
 {
-"username": "sayeed",
-"password": "123"
+  "username": "sayeed",
+  "password": "123"
 }
-
+```
 
 ## Section Two (User Notes CRUD and Note Tag api Endpoints):
 
@@ -104,13 +104,13 @@ http://127.0.0.1:5000/api/notes/2
 
 ### Sample Login payload for POST and PUT request
 
-
+```json
 {
-"message": "note created from postman Three",
-"public": false,
-"tag_id": 1
+  "message": "note created from postman Three",
+  "public": false,
+  "tag_id": 1
 }
-
+```
 
 ## Section Three (gettign list of notes public and users private):
 
@@ -148,16 +148,14 @@ http://127.0.0.1:5000/api/all-notes
 
 ### Sample Login payload for POST and PUT request
 
-
+```json
 {
-"message": "note created from postman Three",
-"public": false,
-"tag_id": 1
+  "message": "note created from postman Three",
+  "public": false,
+  "tag_id": 1
 }
-
+```
 
 ## License
 
 This project is released under [MITlicense](https://www.mit.edu/~amini/LICENSE.md)
-
-````
