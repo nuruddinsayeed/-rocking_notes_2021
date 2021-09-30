@@ -23,12 +23,6 @@ api.add_resource(NotesByTag, '/api/notes/<string:tag_name>')
 api.add_resource(TagResoruce, '/api/tags')
 api.add_resource(NoteResource, '/api/notes/<int:id>')
 
-# simple utility function to create tables
-# def create_tables():
-#     with db:
-#         db.create_tables(
-#             [auth.User, Note, Tag, Note.tags.get_through_model()])
-
 
 if __name__ == '__main__':
     auth.User.create_table(fail_silently=True)

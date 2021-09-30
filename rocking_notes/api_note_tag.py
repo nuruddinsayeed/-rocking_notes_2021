@@ -78,7 +78,7 @@ class NoteResource(Resource):
 
             if not message:
                 return 'Missing message', 400
-            if not public:
+            if public is None:
                 return 'Missing public', 400
             if not tag_id:
                 return 'Missing tag_id', 400
