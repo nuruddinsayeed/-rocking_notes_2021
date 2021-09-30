@@ -18,7 +18,7 @@ interesting? Okay let's get started.
 
 ## Installation
 
-```
+```json
 $ git clone https://github.com/nuruddinsayeed/-rocking_notes_2021.git
 $ cd (enter the downloaded directory)
 $ python3 -m venv venv
@@ -50,10 +50,7 @@ or registration. So to authenticate, this token have to be used in
 header section as Authorization and the tokne should be like this:
 (Bearer your_auth_token). sample token: Bearer
 
-```
 Bearer eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMjk3MDI1MywianRpIjoiOGUwMWI5NTEtYmYzMC00ZDFlLTk4YmItOWI5NjgzNTI1NDM0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJ1c2VybmFtZSI6InNheWVkIn0sIm5iZiI6MTYzMjk3MDI1MywiZXhwIjoxNjMyOTcxMTUzfQ.mr0nc-fvJqm7HRyBmQSFjuceWTCQb2lfNPBFvVdG9P8
-
-```
 
 ## This Project has three types of api endpoint
 
@@ -61,8 +58,7 @@ Bearer eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzMjk3MDI1MywianRpIjoiOGUwMWI5NTEtYmYzMC00Z
 
 _Save this login token to use it latter_
 
-````
-
+````json
 Login Token URL: http://127.0.0.1:5000/api/login
 Registration URL: http://127.0.0.1:5000/api/register
 
@@ -70,7 +66,6 @@ Registration URL: http://127.0.0.1:5000/api/register
 
 ### Sample Registration payload
 
-```
 
 {
 "username": "sayeed",
@@ -78,24 +73,21 @@ Registration URL: http://127.0.0.1:5000/api/register
 "password": "123"
 }
 
-```
 
 ### Sample Login payload
 
-```
 
 {
 "username": "sayeed",
 "password": "123"
 }
 
-```
 
 ## Section Two (User Notes CRUD and Note Tag api Endpoints):
 
 _For creating a new Tag_(GET, POST)
 
-```
+```json
 
 http://127.0.0.1:5000/api/tags
 
@@ -104,7 +96,7 @@ http://127.0.0.1:5000/api/tags
 _For creating updatng deleting and getting notes_(GET, POST, PUT, DELETE)
 _here 2 is id of the notes_
 
-```
+```json
 
 http://127.0.0.1:5000/api/notes/2
 
@@ -112,7 +104,6 @@ http://127.0.0.1:5000/api/notes/2
 
 ### Sample Login payload for POST and PUT request
 
-```
 
 {
 "message": "note created from postman Three",
@@ -120,13 +111,12 @@ http://127.0.0.1:5000/api/notes/2
 "tag_id": 1
 }
 
-```
 
 ## Section Three (gettign list of notes public and users private):
 
 _To get users all notes_
 
-```
+```json
 
 http://127.0.0.1:5000/api/notes
 
@@ -134,7 +124,7 @@ http://127.0.0.1:5000/api/notes
 
 _To get all users public notes all notes_
 
-```
+```json
 
 http://127.0.0.1:5000/api/all-notes
 
@@ -142,7 +132,7 @@ http://127.0.0.1:5000/api/all-notes
 
 _To get users all notes filtered by notes tag_
 
-```
+```json
 
 http://127.0.0.1:5000/api/notes
 
@@ -150,7 +140,7 @@ http://127.0.0.1:5000/api/notes
 
 _To get all users public notes filtered by notes tag_
 
-```
+```json
 
 http://127.0.0.1:5000/api/all-notes
 
@@ -158,7 +148,6 @@ http://127.0.0.1:5000/api/all-notes
 
 ### Sample Login payload for POST and PUT request
 
-```
 
 {
 "message": "note created from postman Three",
@@ -166,10 +155,9 @@ http://127.0.0.1:5000/api/all-notes
 "tag_id": 1
 }
 
-```
 
 ## License
 
 This project is released under [MITlicense](https://www.mit.edu/~amini/LICENSE.md)
-```
+
 ````
