@@ -34,10 +34,10 @@ $ python app.py
 
 _If Poject setup is successfull, then you can follow the steps bellw_
 
-### Video Link:
+### Screenshot:
 
 <p align="center">
-  <a href="https://youtu.be/TbacbAHp7H8"><img src="https://github.com/nuruddinsayeed/ami-code-parina-project/blob/main/zzzz.png" width="290"></a>
+  <a href=""><img src="https://github.com/nuruddinsayeed/-rocking_notes_2021/blob/main/Screenshot%202021-09-30%20at%2011.18.18%20AM.png" width="290"></a>
 </p>
 
 ## about token authentication

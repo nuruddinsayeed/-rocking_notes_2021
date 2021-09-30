@@ -47,7 +47,10 @@ class NotesByTagPublic(Resource):
     """provite all users node on specifiq tag"""
 
     def get(self, tag_name):
-        tag = Tag.get(tag_name=tag_name)
+        try:
+            tag = Tag.get(tag_name=tag_name)
+        except Exception as e:
+            return 'Tag Not Found!', 400
 
         if tag:
 
@@ -94,7 +97,10 @@ class NotesByTag(Resource):
 
     @jwt_required()
     def get(self, tag_name):
-        tag = Tag.get(tag_name=tag_name)
+        try:
+            tag = Tag.get(tag_name=tag_name)
+        except Exception as e:
+            return 'Tag Not Found!', 400
 
         if tag:
 
