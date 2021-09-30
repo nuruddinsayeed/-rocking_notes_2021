@@ -102,7 +102,7 @@ http://127.0.0.1:5000/api/notes/2
 
 ```
 
-### Sample Login payload for POST and PUT request
+### Sample payload for POST and PUT request (New Note Object/update not objec)
 
 ```json
 {
@@ -114,7 +114,7 @@ http://127.0.0.1:5000/api/notes/2
 
 ## Section Three (gettign list of notes public and users private):
 
-_To get users all notes_
+_To get users all notes_ (public + usrs private)
 
 ```json
 
@@ -122,7 +122,7 @@ http://127.0.0.1:5000/api/notes
 
 ```
 
-_To get all users public notes all notes_
+_To get all users public notes all notes_ (Public)
 
 ```json
 
@@ -130,30 +130,33 @@ http://127.0.0.1:5000/api/all-notes
 
 ```
 
-_To get users all notes filtered by notes tag_
+_To get users all notes filtered by notes tag_ (Private + Public)
 
 ```json
 
+http://127.0.0.1:5000/api/all-notes/Language (here Language is the Tag name)
+
+```
+
+_To get all users public notes filtered by notes tag_ (Public)
+
+```json
+
+http://127.0.0.1:5000/api/notes/Language (here Language is the Tag name)
+
+```
+
+### All endpoints:
+
+```json
+http://127.0.0.1:5000/api/login
+http://127.0.0.1:5000/api/register
+http://127.0.0.1:5000/api/all-notes
+http://127.0.0.1:5000/api/all-notes/<string:tag_name>
 http://127.0.0.1:5000/api/notes
-
-```
-
-_To get all users public notes filtered by notes tag_
-
-```json
-
-http://127.0.0.1:5000/api/all-notes
-
-```
-
-### Sample Login payload for POST and PUT request
-
-```json
-{
-  "message": "note created from postman Three",
-  "public": false,
-  "tag_id": 1
-}
+http://127.0.0.1:5000/api/notes/<string:tag_name>
+http://127.0.0.1:5000/api/tags
+http://127.0.0.1:5000/api/notes/<int:id>
 ```
 
 ## License

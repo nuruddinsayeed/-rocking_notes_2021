@@ -20,6 +20,7 @@ def note_dictionary(notes):
         if note.tags:
             tags = [tag.tag_name for tag in note.tags]
         notes_list.append({
+            'id': note.id,
             'user': note.user.username,
             'tags': tags,
             'message': note.message,
