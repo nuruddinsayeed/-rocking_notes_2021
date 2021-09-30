@@ -4,6 +4,7 @@ autopep8==1.5.7
 click==8.0.1
 Flask==2.0.1
 Flask-JWT==0.3.2
+Flask-JWT-Extended==4.3.0
 Flask-Migrate==3.1.0
 flask-peewee==3.0.4
 Flask-RESTful==0.3.9
@@ -16,7 +17,7 @@ Mako==1.1.5
 MarkupSafe==2.0.1
 peewee==3.14.4
 pycodestyle==2.7.0
-PyJWT==1.4.2
+PyJWT==2.1.0
 pyparsing==2.4.7
 pytz==2021.1
 six==1.16.0
