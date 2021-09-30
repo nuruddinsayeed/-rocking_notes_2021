@@ -3,7 +3,12 @@ from rocking_notes.admin import auth, admin
 
 from rocking_notes.models import Note, Tag, NotesTags
 from rocking_notes.api_config import api
-from rocking_notes.api import All_public_notes, All_user_notes, Login, Register
+
+from rocking_notes.api_auth import Login, Register
+from rocking_notes.api_notes_list import (
+    AllPublicNotes, NotesByTagPublic, AllUserNotes, NotesByTag
+)
+from rocking_notes.api_note_tag import TagResoruce
 
 
 # setup admin
@@ -11,8 +16,11 @@ admin.setup()
 # add api endpoints
 api.add_resource(Login, '/api/login')
 api.add_resource(Register, '/api/register')
-api.add_resource(All_public_notes, '/api/all-notes')
-api.add_resource(All_user_notes, '/api/notes')
+api.add_resource(AllPublicNotes, '/api/all-notes')
+api.add_resource(NotesByTagPublic, '/api/all-notes/<string:tag_name>')
+api.add_resource(AllUserNotes, '/api/notes')
+api.add_resource(NotesByTag, '/api/notes/<string:tag_name>')
+api.add_resource(TagResoruce, '/api/tags')
 
 # simple utility function to create tables
 # def create_tables():
