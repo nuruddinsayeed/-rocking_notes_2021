@@ -30,6 +30,10 @@ Installing Part is done now lets Run our app
 
 $ python app.py
 
+## Test This Project using Postman
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2862156-54abe583-7473-423a-ac39-71fad2791602?action=collection%2Ffork&collection-url=entityId%3D2862156-54abe583-7473-423a-ac39-71fad2791602%26entityType%3Dcollection%26workspaceId%3D238a6a29-670b-4272-b4dc-ba98514f8e0c)
+
 ## Project Detail:
 
 _If Poject setup is successfull, then you can follow the steps bellw_
@@ -145,6 +149,10 @@ _To get all users public notes filtered by notes tag_ (Public)
 http://127.0.0.1:5000/api/notes/Language (here Language is the Tag name)
 
 ```
+
+## Test This Project using Postman
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/2862156-54abe583-7473-423a-ac39-71fad2791602?action=collection%2Ffork&collection-url=entityId%3D2862156-54abe583-7473-423a-ac39-71fad2791602%26entityType%3Dcollection%26workspaceId%3D238a6a29-670b-4272-b4dc-ba98514f8e0c)
 
 ### All endpoints:
 
